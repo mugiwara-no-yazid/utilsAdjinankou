@@ -1,0 +1,474 @@
+    @font-face {
+        font-family: 'Barlow';
+        src: url('font/Barlow-Regular.ttf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #f8f9fa;
+        color: #1f2937;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 2rem 1rem;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+        font-size: calc(1.375rem + 1.5vw);
+        font-weight: 800;
+        margin-top: 80px;
+    }
+
+    header p {
+        font-size: 1.1rem;
+        opacity: 0.95;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    #banner-gen-wrapper {
+        max-width: 1800px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    /* Layout 3 colonnes */
+    .bgv2-container {
+        display: grid;
+        grid-template-columns: 300px 1fr 340px;
+        gap: 24px;
+        align-items: start;
+        max-width: 100%;
+    }
+
+    .bgv2-controls {
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        position: sticky;
+        top: 20px;
+    }
+
+    .bgv2-section {
+        margin-bottom: 20px;
+    }
+
+    .bgv2-label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 8px;
+    }
+
+    .bgv2-select,
+    .bgv2-input,
+    .bgv2-textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #ffffff;
+        color: #1f2937;
+        font-family: inherit;
+        transition: all 0.2s;
+    }
+
+    .bgv2-select:focus,
+    .bgv2-input:focus,
+    .bgv2-textarea:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .bgv2-textarea {
+        min-height: 80px;
+        resize: vertical;
+    }
+
+    .bgv2-color-picker {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .bgv2-color-pastille {
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .bgv2-color-display {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid #e5e7eb;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s;
+        overflow: hidden;
+    }
+
+    .bgv2-color-display:hover {
+        border-color: #667eea;
+        transform: scale(1.05);
+    }
+
+    .bgv2-color-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .bgv2-color-text {
+        flex: 1;
+        padding: 10px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 13px;
+        font-family: 'Monaco', monospace;
+        background: #ffffff;
+        color: #1f2937;
+        text-transform: uppercase;
+    }
+
+    .bgv2-slider-group {
+        margin-bottom: 16px;
+    }
+
+    .bgv2-slider-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .bgv2-slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 6px;
+        border-radius: 3px;
+        background: #e5e7eb;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .bgv2-slider::-webkit-slider-track {
+        width: 100%;
+        height: 6px;
+        background: #e5e7eb;
+        border-radius: 3px;
+    }
+
+    .bgv2-slider::-moz-range-track {
+        width: 100%;
+        height: 6px;
+        background: #e5e7eb;
+        border-radius: 3px;
+    }
+
+    .bgv2-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #667eea;
+        cursor: pointer;
+        border: 2px solid #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .bgv2-slider::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #667eea;
+        cursor: pointer;
+        border: 2px solid #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .bgv2-slider::-webkit-slider-thumb:hover {
+        background: #5a67d8;
+    }
+
+    .bgv2-slider::-moz-range-thumb:hover {
+        background: #5a67d8;
+    }
+
+    .bgv2-slider-value {
+        font-size: 13px;
+        color: #6b7280;
+        font-weight: 500;
+        min-width: 50px;
+        text-align: right;
+    }
+
+    .bgv2-button {
+        padding: 10px 16px;
+        border-radius: 18px;
+        font-weight: 500;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        transition: all 0.2s;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .bgv2-button-primary {
+        background: #ff9320;
+        color: #fafafa;
+        box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+    }
+
+    .bgv2-button-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+    }
+
+    .bgv2-button-secondary {
+        background: #f3f4f6;
+        color: #374151;
+    }
+
+    .bgv2-button-secondary:hover {
+        background: #e5e7eb;
+    }
+
+    .bgv2-button-danger {
+        background: #fee2e2;
+        color: #dc2626;
+    }
+
+    .bgv2-button-danger:hover {
+        background: #fecaca;
+    }
+
+    .bgv2-add-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .bgv2-hint {
+        font-size: 12px;
+        color: #9ca3af;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+
+    .bgv2-preview {
+        background: #ffffff;
+        padding: 32px;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+        overflow: hidden;
+    }
+
+    #canvas-container-v2 {
+        position: relative;
+        display: inline-block;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        max-width: 100%;
+    }
+
+    #canvas-v2 {
+        display: block;
+        cursor: default;
+        border-radius: 2px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .bgv2-context-panel {
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 20px;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        min-height: 300px;
+    }
+
+    .bgv2-context-panel.hidden {
+        display: none;
+    }
+
+    .bgv2-context-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .bgv2-context-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #111827;
+    }
+
+    .bgv2-close-btn {
+        width: 28px;
+        height: 28px;
+        background: #f3f4f6;
+        color: #6b7280;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 1;
+        transition: all 0.2s;
+    }
+
+    .bgv2-close-btn:hover {
+        background: #e5e7eb;
+        color: #374151;
+    }
+
+    .bgv2-empty-state {
+        text-align: center;
+        color: #9ca3af;
+        font-size: 14px;
+        padding: 60px 20px;
+        line-height: 1.6;
+    }
+
+    .bgv2-context-actions {
+        display: grid;
+        gap: 10px;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 1200px) {
+        .bgv2-container {
+            grid-template-columns: 280px 1fr 300px;
+            gap: 16px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .bgv2-container {
+            grid-template-columns: 1fr;
+        }
+
+        .bgv2-controls,
+        .bgv2-context-panel {
+            position: relative;
+            top: 0;
+            max-height: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        header p {
+            font-size: 1rem;
+        }
+
+        #banner-gen-wrapper {
+            padding: 12px;
+            margin: 20px auto;
+        }
+
+        .bgv2-controls,
+        .bgv2-preview,
+        .bgv2-context-panel {
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .bgv2-add-buttons {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #banner-gen-wrapper {
+            padding: 8px;
+        }
+
+        .bgv2-controls,
+        .bgv2-preview,
+        .bgv2-context-panel {
+            padding: 12px;
+        }
+    }
+
+    .bgv2-controls::-webkit-scrollbar,
+    .bgv2-context-panel::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .bgv2-controls::-webkit-scrollbar-track,
+    .bgv2-context-panel::-webkit-scrollbar-track {
+        background: #f3f4f6;
+    }
+
+    .bgv2-controls::-webkit-scrollbar-thumb,
+    .bgv2-context-panel::-webkit-scrollbar-thumb {
+        background: #d1d5db;
+        border-radius: 3px;
+    }
+
+    footer {
+        background: #1f2937;
+        color: #9ca3af;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 4rem;
+    }
+
+    footer p {
+        margin: 0.5rem 0;
+    }
+
+    footer a {
+        color: #667eea;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
