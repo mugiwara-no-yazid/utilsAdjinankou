@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+
     <style>
         @font-face {
             font-family: 'Barlow';
@@ -76,7 +75,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
         }
 
         .section-header {
@@ -135,7 +134,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .resource-card::before {
@@ -152,7 +151,7 @@
 
         .resource-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             border-color: #ff9320;
         }
 
@@ -246,7 +245,7 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 25px;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
@@ -352,6 +351,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -378,7 +378,7 @@
 </head>
 
 <body>
-   
+
     <!-- Section Ressources Utiles -->
     <section class="resources-section">
         <div class="container">
@@ -391,19 +391,21 @@
                 <!-- QR Code Generator -->
                 <a href="generateur-qr-code.php" class="resource-card">
                     <div class="resource-icon qr-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="7" height="7"/>
-                            <rect x="14" y="3" width="7" height="7"/>
-                            <rect x="3" y="14" width="7" height="7"/>
-                            <rect x="14" y="14" width="7" height="7"/>
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" />
+                            <rect x="14" y="3" width="7" height="7" />
+                            <rect x="3" y="14" width="7" height="7" />
+                            <rect x="14" y="14" width="7" height="7" />
                         </svg>
                     </div>
                     <h3 class="resource-title">Générateur de QR Code</h3>
-                    <p class="resource-description">Créez des QR codes personnalisés pour URL, WiFi, vCard et plus encore. Totalement gratuit.</p>
+                    <p class="resource-description">Créez des QR codes personnalisés pour URL, WiFi, vCard et plus
+                        encore. Totalement gratuit.</p>
                     <div class="resource-badge">Gratuit</div>
                     <div class="resource-arrow">
                         <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none" />
                         </svg>
                     </div>
                 </a>
@@ -411,19 +413,21 @@
                 <!-- Calendrier Editorial -->
                 <a href="calendrier-editorial.php" class="resource-card">
                     <div class="resource-icon calendar-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" />
+                            <line x1="16" y1="2" x2="16" y2="6" />
+                            <line x1="8" y1="2" x2="8" y2="6" />
+                            <line x1="3" y1="10" x2="21" y2="10" />
                         </svg>
                     </div>
                     <h3 class="resource-title">Calendrier Éditorial</h3>
-                    <p class="resource-description">Planifiez vos publications sur tous vos réseaux sociaux. Organisez votre stratégie de contenu facilement.</p>
+                    <p class="resource-description">Planifiez vos publications sur tous vos réseaux sociaux. Organisez
+                        votre stratégie de contenu facilement.</p>
                     <div class="resource-badge">Gratuit</div>
                     <div class="resource-arrow">
                         <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none" />
                         </svg>
                     </div>
                 </a>
@@ -431,61 +435,92 @@
                 <!-- Palette de Couleurs -->
                 <a href="generateur-palette-couleurs.php" class="resource-card">
                     <div class="resource-icon palette-icon">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
-                            <circle cx="6.5" cy="11.5" r="1.5"/>
-                            <circle cx="9.5" cy="7.5" r="1.5"/>
-                            <circle cx="14.5" cy="7.5" r="1.5"/>
-                            <circle cx="17.5" cy="11.5" r="1.5"/>
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                            <circle cx="6.5" cy="11.5" r="1.5" />
+                            <circle cx="9.5" cy="7.5" r="1.5" />
+                            <circle cx="14.5" cy="7.5" r="1.5" />
+                            <circle cx="17.5" cy="11.5" r="1.5" />
                         </svg>
                     </div>
                     <h3 class="resource-title">Générateur de Palette</h3>
-                    <p class="resource-description">Extrayez automatiquement les couleurs dominantes de vos images. Parfait pour votre charte graphique.</p>
+                    <p class="resource-description">Extrayez automatiquement les couleurs dominantes de vos images.
+                        Parfait pour votre charte graphique.</p>
                     <div class="resource-badge">Gratuit</div>
                     <div class="resource-arrow">
                         <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none" />
                         </svg>
                     </div>
                 </a>
                 <!--Generator signature  mail-->
-                 <a href="./views/generateur-baniere.php" class="resource-card">
+                <a href="./views/generateur-baniere.php" class="resource-card">
                     <div class="resource-icon calendar-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-                        <rect width="800" height="800" fill="none" rx="80"/>
-                        <rect x="130" y="230" width="540" height="370" fill="#E8EBF0" rx="15"/>
-                        <rect x="130" y="230" width="540" height="70" fill="#5B6B8F" rx="15"/>
-                        <rect x="130" y="280" width="540" height="20" fill="#5B6B8F"/>
-                        <circle cx="190" cy="265" r="12" fill="#EF5350"/>
-                        <circle cx="230" cy="265" r="12" fill="#F9C74F"/>
-                        <circle cx="270" cy="265" r="12" fill="#90C695"/>
-                        <rect x="420" y="250" width="220" height="30" fill="#FFFFFF" rx="15"/>
-                        <rect x="200" y="350" width="400" height="150" fill="#FFFFFF" rx="10"/>
-                        <rect x="230" y="370" width="70" height="70" fill="#0A66C2" rx="5"/>
-                        <text x="248" y="420" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF">in</text>
-                        <line x1="330" y1="385" x2="570" y2="385" stroke="#000000" stroke-width="6" stroke-linecap="round"/>
-                        <line x1="330" y1="405" x2="520" y2="405" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
-                        <line x1="330" y1="425" x2="540" y2="425" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
-                        <line x1="330" y1="445" x2="500" y2="445" stroke="#000000" stroke-width="5" stroke-linecap="round"/>
-                        <rect x="530" y="370" width="90" height="70" fill="#FFFFFF" stroke="#000000" stroke-width="3" rx="5"/>
-                        
-                        <!-- Mountain icon in image placeholder -->
-                        <polyline points="540,425 555,410 570,425 585,405 600,425" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <polyline points="540,425 555,410 570,425 585,405 600,425 600,435 540,435" fill="#E8EBF0" stroke="#000000" stroke-width="2.5" stroke-linejoin="round"/>
-                        <circle cx="575" cy="385" r="6" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
-                        
-                        <!-- Sparkle decoration -->
-                        <g transform="translate(720, 720)">
-                            <path d="M 0,-15 L 2,-2 L 15,0 L 2,2 L 0,15 L -2,2 L -15,0 L -2,-2 Z" fill="#FFFFFF" opacity="0.9"/>
-                        </g>
+                            <rect width="800" height="800" fill="none" rx="80" />
+                            <rect x="130" y="230" width="540" height="370" fill="#E8EBF0" rx="15" />
+                            <rect x="130" y="230" width="540" height="70" fill="#5B6B8F" rx="15" />
+                            <rect x="130" y="280" width="540" height="20" fill="#5B6B8F" />
+                            <circle cx="190" cy="265" r="12" fill="#EF5350" />
+                            <circle cx="230" cy="265" r="12" fill="#F9C74F" />
+                            <circle cx="270" cy="265" r="12" fill="#90C695" />
+                            <rect x="420" y="250" width="220" height="30" fill="#FFFFFF" rx="15" />
+                            <rect x="200" y="350" width="400" height="150" fill="#FFFFFF" rx="10" />
+                            <rect x="230" y="370" width="70" height="70" fill="#0A66C2" rx="5" />
+                            <text x="248" y="420" font-family="Arial, sans-serif" font-size="48" font-weight="bold"
+                                fill="#FFFFFF">in</text>
+                            <line x1="330" y1="385" x2="570" y2="385" stroke="#000000" stroke-width="6"
+                                stroke-linecap="round" />
+                            <line x1="330" y1="405" x2="520" y2="405" stroke="#000000" stroke-width="5"
+                                stroke-linecap="round" />
+                            <line x1="330" y1="425" x2="540" y2="425" stroke="#000000" stroke-width="5"
+                                stroke-linecap="round" />
+                            <line x1="330" y1="445" x2="500" y2="445" stroke="#000000" stroke-width="5"
+                                stroke-linecap="round" />
+                            <rect x="530" y="370" width="90" height="70" fill="#FFFFFF" stroke="#000000"
+                                stroke-width="3" rx="5" />
+                            <polyline points="540,425 555,410 570,425 585,405 600,425" fill="none" stroke="#000000"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <polyline points="540,425 555,410 570,425 585,405 600,425 600,435 540,435" fill="#E8EBF0"
+                                stroke="#000000" stroke-width="2.5" stroke-linejoin="round" />
+                            <circle cx="575" cy="385" r="6" fill="#FFFFFF" stroke="#000000" stroke-width="2" />
+                            <g transform="translate(720, 720)">
+                                <path d="M 0,-15 L 2,-2 L 15,0 L 2,2 L 0,15 L -2,2 L -15,0 L -2,-2 Z" fill="#FFFFFF"
+                                    opacity="0.9" />
+                            </g>
                         </svg>
                     </div>
                     <h3 class="resource-title">Générateur Bannières Réseaux sociaux</h3>
-                    <p class="resource-description">Créez des visuels d'impact pour tous vos profils. Générez vos bannières personnalisées en quelques clics.</p>
+                    <p class="resource-description">Créez des visuels d'impact pour tous vos profils. Générez vos
+                        bannières personnalisées en quelques clics.</p>
                     <div class="resource-badge">Gratuit</div>
                     <div class="resource-arrow">
                         <svg width="20" height="20" viewBox="0 0 20 20">
-                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                </a>
+                <!--Generateur de signature-->
+                <a href="./views/generateur-signature.php" class="resource-card">
+                    <div class="resource-icon calendar-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+                            <rect width="200" height="200" rx="20" fill="#000000" />
+                            <rect x="30" y="85" width="45" height="35" rx="5" fill="#FFFFFF" />
+                            <path d="M 35 95 L 52.5 107 L 70 95" stroke="#000000" stroke-width="2" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <rect x="90" y="85" width="80" height="6" rx="3" fill="#FFFFFF" />
+                            <rect x="90" y="100" width="80" height="6" rx="3" fill="#FFFFFF" />
+                            <rect x="90" y="115" width="80" height="6" rx="3" fill="#FFFFFF" />
+                        </svg>
+                    </div>
+                    <h3 class="resource-title">Générateur de Signature E-mail</h3>
+                    <p class="resource-description">Uniformisez vos échanges professionnels. Créez et personnalisez votre signature mail en un instant.</p>
+                    <div class="resource-badge">Gratuit</div>
+                    <div class="resource-arrow">
+                        <svg width="20" height="20" viewBox="0 0 20 20">
+                            <path d="M5 10h10M10 5l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none" />
                         </svg>
                     </div>
                 </a>
@@ -493,7 +528,7 @@
         </div>
     </section>
 
-    
+
 
     <!-- Bouton retour en haut -->
     <button class="back-to-top" title="Retour en haut"></button>
@@ -521,7 +556,7 @@
         });
 
         // Animation on scroll
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const slideElements = document.querySelectorAll('.slide-up');
 
             const observer = new IntersectionObserver((entries) => {

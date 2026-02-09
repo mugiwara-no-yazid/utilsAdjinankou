@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Générateur de Bannières Réseaux Sociaux Gratuit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../styles/generateur-baniere.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Anton&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -113,13 +118,6 @@
         
         <div style="margin-top: 16px;">
           <label class="bgv2-label">Ajustement de l'image</label>
-         <!-- <select id="bgImageFit" class="bgv2-select">
-            <option value="cover">Couvrir (cover)</option>
-            <option value="contain">Contenir (contain)</option>
-            <option value="fill">Étirer (fill)</option>
-            <option value="repeat">Répéter (repeat)</option>
-            <option value="no-repeat">Centré (no-repeat)</option>
-          </select>-->
           <select id="bgImageFit" class="bgv2-select">
             <option value="cover">Remplit tout l'espace</option>
             <option value="contain">Image complète visible</option>
