@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 40px;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+.main-content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 60px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.file-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #666;
+    flex-wrap: wrap;
+}
+
+.btn-file {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.vcard-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.vcard-text {
+    flex: 1;
+}
+
+.vcard-text h2 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.job-line {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.vcard-text p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.vcard-qr {
+    flex-shrink: 0;
+}
+
+#qrcode img {
+    width: 140px;
+    height: 140px;
+    display: block;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-yellow {
+    background-color: #ffd700;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.btn-yellow:hover {
+    background-color: #ffed4e;
+}
+
+.btn-light {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.btn-light:hover {
+    background-color: #e0e0e0;
+}
+
+.footer-note {
+    font-size: 12px;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .vcard-card {
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .vcard-qr {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn-yellow,
+    .btn-light {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .input-group input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .yellow-badge {
+        margin-bottom: 25px;
+    }
+
+    .vcard-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .vcard-text h2 {
+        font-size: 20px;
+    }
+
+    .vcard-text p {
+        font-size: 14px;
+    }
+
+    #qrcode img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn-yellow,
+    .btn-light {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .file-input-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .btn-file {
+        width: 100%;
+        text-align: center;
+    }
+}
