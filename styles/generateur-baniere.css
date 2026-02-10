@@ -17,12 +17,16 @@
         background: #f8f9fa;
         color: #1f2937;
         line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
 
     header {
         padding: 2rem 1rem;
         text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 1300px; 
     }
 
     header h1 {
@@ -39,16 +43,17 @@
     }
 
     #banner-gen-wrapper {
-        max-width: 1800px;
+        max-width: 1300px; 
         margin: 40px auto;
-        padding: 0 20px;
+        padding: 0 40px; 
     }
 
     /* Layout 3 colonnes */
     .bgv2-container {
         display: grid;
-        grid-template-columns: 300px 1fr 340px;
-        gap: 24px;
+        /* On garde tes largeurs fixes mais le '1fr' s'occupe de l'équilibre central */
+        grid-template-columns: 300px 1fr 340px; 
+        gap: 32px; /* Un peu plus d'espace entre les colonnes pour la clarté */
         align-items: start;
         max-width: 100%;
     }
@@ -385,7 +390,7 @@
     }
 
     @media (max-width: 1024px) {
-        .bgv2-container {
+       .bgv2-container {
             grid-template-columns: 1fr;
         }
 
