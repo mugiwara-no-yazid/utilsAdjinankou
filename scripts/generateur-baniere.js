@@ -927,7 +927,7 @@
             let fontStyle = '';
             if (txt.italic) fontStyle += 'italic ';
             if (txt.bold) fontStyle += 'bold ';
-
+            
             ctx.font = `${fontStyle}${txt.size}px ${txt.font}`;
             ctx.fillStyle = txt.color;
             ctx.textAlign = 'center';
@@ -957,7 +957,15 @@
             // 4. Mettre à jour les zones de clic (elementBounds) avec la hauteur totale
             const w = maxWidth;
             const h = totalHeight;
-
+if (txt.underline) {
+            const underlineY = txt.y + (txt.size * 0.5) + (txt.size * 0.1);
+            ctx.strokeStyle = txt.color;
+            ctx.lineWidth = Math.max(1, txt.size * 0.05);
+            ctx.beginPath();
+            ctx.moveTo(txt.x - w/2, underlineY);
+            ctx.lineTo(txt.x + w/2, underlineY);
+            ctx.stroke();
+            }
             elementBounds.texts.push({
                 id: txt.id,
                 left: txt.x - w / 2,
@@ -978,3 +986,4 @@
 
     init();
 })();
+
