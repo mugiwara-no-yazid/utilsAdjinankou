@@ -1,166 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Générateur de Bannières Réseaux Sociaux Gratuit</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/global.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../styles/generateur-baniere.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Générateur de Bannières Réseaux Sociaux Gratuit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/global.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles/generateur-baniere.css">
 </head>
+
 <body>
-<header>
+  <header>
     <h1>
-        Concevez vos visuels de réseaux sociaux en ligne gratuitement. Boostez votre image de marque en quelques secondes.
+      Concevez vos visuels de réseaux sociaux en ligne gratuitement.
     </h1>
-</header>
-<div id="banner-gen-wrapper">
-  <div class="bgv2-container">  
-    <div class="bgv2-controls">
-      <div class="bgv2-section">
-        <label class="bgv2-label">Format de bannière</label>
-        <select id="bgFormatSelect" class="bgv2-select">
-          <optgroup label="Facebook">
-            <option value="1200,630">Facebook Post (1200 × 630 px)</option>
-            <option value="820,312">Facebook Couverture (820 × 312 px)</option>
-            <option value="1080,1920">Facebook Story (1080 × 1920 px)</option>
-          </optgroup>
-          <optgroup label="Instagram">
-            <option value="1080,1080" selected>Instagram Post Carré (1080 × 1080 px)</option>
-            <option value="1080,1350">Instagram Post Portrait (1080 × 1350 px)</option>
-            <option value="1080,566">Instagram Post Paysage (1080 × 566 px)</option>
-            <option value="1080,1920">Instagram Story (1080 × 1920 px)</option>
-          </optgroup>
-          <optgroup label="Twitter / X">
-            <option value="1200,675">Twitter Post (1200 × 675 px)</option>
-            <option value="1500,500">Twitter Header (1500 × 500 px)</option>
-          </optgroup>
-          <optgroup label="LinkedIn">
-            <option value="1200,627">LinkedIn Post (1200 × 627 px)</option>
-            <option value="1584,396">LinkedIn Couverture (1584 × 396 px)</option>
-          </optgroup>
-          <optgroup label="YouTube">
-            <option value="1280,720">YouTube Miniature (1280 × 720 px)</option>
-            <option value="2560,1440">YouTube Bannière (2560 × 1440 px)</option>
-          </optgroup>
-          <optgroup label="Pinterest">
-            <option value="1000,1500">Pinterest Pin (1000 × 1500 px)</option>
-          </optgroup>
-          <optgroup label="TikTok">
-            <option value="1080,1920">TikTok Vidéo (1080 × 1920 px)</option>
-          </optgroup>
-        </select>
-      </div>
-
-      <div class="bgv2-section">
-        <label class="bgv2-label">Type de fond</label>
-        <select id="bgType" class="bgv2-select">
-          <option value="color">Couleur unie</option>
-          <option value="gradient">Dégradé</option>
-          <option value="image">Image</option>
-        </select>
-      </div>
-
-      <div id="bgColorControls" class="bgv2-section">
-        <label class="bgv2-label">Couleur de fond</label>
-        <div class="bgv2-color-picker">
-          <div class="bgv2-color-pastille">
-            <div class="bgv2-color-display" id="bgColorDisplay" style="background: #ffffff;"></div>
-            <input type="color" id="bgColor" value="#ffffff" class="bgv2-color-input">
-          </div>
-          <input type="text" id="bgColorText" value="#ffffff" class="bgv2-color-text">
-        </div>
-      </div>
-
-      <div id="bgGradientControls" class="bgv2-section" style="display:none;">
-        <label class="bgv2-label">Type de dégradé</label>
-        <select id="bgGradientType" class="bgv2-select">
-          <option value="linear">Linéaire</option>
-          <option value="radial">Radial</option>
-        </select>
-
-        <div class="bgv2-slider-group">
-          <div class="bgv2-slider-label">
-            <label class="bgv2-label" style="margin: 0;">Angle</label>
-            <span id="bgGradAngleVal" class="bgv2-slider-value">90°</span>
-          </div>
-          <input type="range" id="bgGradAngle" min="0" max="360" value="90" class="bgv2-slider">
-        </div>
-
-        <label class="bgv2-label">Couleur 1</label>
-        <div class="bgv2-color-picker" style="margin-bottom: 16px;">
-          <div class="bgv2-color-pastille">
-            <div class="bgv2-color-display" id="bgGrad1Display" style="background: #667eea;"></div>
-            <input type="color" id="bgGrad1" value="#667eea" class="bgv2-color-input">
-          </div>
-          <input type="text" id="bgGrad1Text" value="#667eea" class="bgv2-color-text">
-        </div>
-
-        <label class="bgv2-label">Couleur 2</label>
-        <div class="bgv2-color-picker">
-          <div class="bgv2-color-pastille">
-            <div class="bgv2-color-display" id="bgGrad2Display" style="background: #764ba2;"></div>
-            <input type="color" id="bgGrad2" value="#764ba2" class="bgv2-color-input">
-          </div>
-          <input type="text" id="bgGrad2Text" value="#764ba2" class="bgv2-color-text">
-        </div>
-      </div>
-
-      <div id="bgImageControls" class="bgv2-section" style="display:none;">
-        <label class="bgv2-label">Image de fond</label>
-        <input type="file" id="bgImageInput" accept="image/*" class="bgv2-input">
-        
-        <div style="margin-top: 16px;">
-          <label class="bgv2-label">Ajustement de l'image</label>
-          <select id="bgImageFit" class="bgv2-select">
-            <option value="cover">Remplit tout l'espace</option>
-            <option value="contain">Image complète visible</option>
-            <option value="fill">Étirer</option>
-            <option value="repeat">Répéter</option>
-            <option value="repeat-x">Répéter horizontalement</option>
-            <option value="repeat-y">Répéter verticalement</option>
-            <option value="no-repeat">Centré</option>
+    <p>
+      Boostez votre image de marque en quelques secondes.
+    </p>
+  </header>
+  <div id="banner-gen-wrapper">
+    <div class="bgv2-container">
+      <div class="bgv2-controls">
+        <div class="bgv2-section">
+          <label class="bgv2-label">Format de bannière</label>
+          <select id="bgFormatSelect" class="bgv2-select">
+            <optgroup label="Facebook">
+              <option value="1200,630">Facebook Post (1200 × 630 px)</option>
+              <option value="820,312">Facebook Couverture (820 × 312 px)</option>
+              <option value="1080,1920">Facebook Story (1080 × 1920 px)</option>
+            </optgroup>
+            <optgroup label="Instagram">
+              <option value="1080,1080" selected>Instagram Post Carré (1080 × 1080 px)</option>
+              <option value="1080,1350">Instagram Post Portrait (1080 × 1350 px)</option>
+              <option value="1080,566">Instagram Post Paysage (1080 × 566 px)</option>
+              <option value="1080,1920">Instagram Story (1080 × 1920 px)</option>
+            </optgroup>
+            <optgroup label="Twitter / X">
+              <option value="1200,675">Twitter Post (1200 × 675 px)</option>
+              <option value="1500,500">Twitter Header (1500 × 500 px)</option>
+            </optgroup>
+            <optgroup label="LinkedIn">
+              <option value="1200,627">LinkedIn Post (1200 × 627 px)</option>
+              <option value="1584,396">LinkedIn Couverture (1584 × 396 px)</option>
+            </optgroup>
+            <optgroup label="YouTube">
+              <option value="1280,720">YouTube Miniature (1280 × 720 px)</option>
+              <option value="2560,1440">YouTube Bannière (2560 × 1440 px)</option>
+            </optgroup>
+            <optgroup label="Pinterest">
+              <option value="1000,1500">Pinterest Pin (1000 × 1500 px)</option>
+            </optgroup>
+            <optgroup label="TikTok">
+              <option value="1080,1920">TikTok Vidéo (1080 × 1920 px)</option>
+            </optgroup>
           </select>
         </div>
-      </div>
 
-      <div class="bgv2-section" style="margin-bottom: 0;">
-        <label class="bgv2-label">Ajouter des éléments</label>
-        <div class="bgv2-add-buttons">
-          <button class="bgv2-button bgv2-button-primary" onclick="addImage()">+ Image</button>
-          <button class="bgv2-button bgv2-button-primary" onclick="addText()">+ Texte</button>
+        <div class="bgv2-section">
+          <label class="bgv2-label">Type de fond</label>
+          <select id="bgType" class="bgv2-select">
+            <option value="color">Couleur unie</option>
+            <option value="gradient">Dégradé</option>
+            <option value="image">Image</option>
+          </select>
         </div>
-        <p class="bgv2-hint">Cliquez sur un élément pour le modifier</p> 
-      </div>
-    </div>
 
-    <!-- CANVAS CENTRAL -->
-    <div class="bgv2-preview">
-      <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
-        <div id="canvas-container-v2">
-          <canvas id="canvas-v2"></canvas>
+        <div id="bgColorControls" class="bgv2-section">
+          <label class="bgv2-label">Couleur de fond</label>
+          <div class="bgv2-color-picker">
+            <div class="bgv2-color-pastille">
+              <div class="bgv2-color-display" id="bgColorDisplay" style="background: #ffffff;"></div>
+              <input type="color" id="bgColor" value="#ffffff" class="bgv2-color-input">
+            </div>
+            <input type="text" id="bgColorText" value="#ffffff" class="bgv2-color-text">
+          </div>
         </div>
-        <button class="bgv2-button bgv2-button-primary" onclick="exportBanner()" style="width: auto; padding: 12px 32px; font-size: 15px;">
-        Télécharger la bannière
-        </button>
-      </div>
-    </div>
 
-    <!-- SIDEBAR DROITE - CONTEXT PANEL -->
-    <div id="contextPanel" class="bgv2-context-panel hidden">
-      <div class="bgv2-empty-state">
-        Sélectionnez un élément<br />dans le canvas<br />pour le modifier
-      </div>
-    </div>
+        <div id="bgGradientControls" class="bgv2-section" style="display:none;">
+          <label class="bgv2-label">Type de dégradé</label>
+          <select id="bgGradientType" class="bgv2-select">
+            <option value="linear">Linéaire</option>
+            <option value="radial">Radial</option>
+          </select>
 
+          <div class="bgv2-slider-group">
+            <div class="bgv2-slider-label">
+              <label class="bgv2-label" style="margin: 0;">Angle</label>
+              <span id="bgGradAngleVal" class="bgv2-slider-value">90°</span>
+            </div>
+            <input type="range" id="bgGradAngle" min="0" max="360" value="90" class="bgv2-slider">
+          </div>
+
+          <label class="bgv2-label">Couleur 1</label>
+          <div class="bgv2-color-picker" style="margin-bottom: 16px;">
+            <div class="bgv2-color-pastille">
+              <div class="bgv2-color-display" id="bgGrad1Display" style="background: #667eea;"></div>
+              <input type="color" id="bgGrad1" value="#667eea" class="bgv2-color-input">
+            </div>
+            <input type="text" id="bgGrad1Text" value="#667eea" class="bgv2-color-text">
+          </div>
+
+          <label class="bgv2-label">Couleur 2</label>
+          <div class="bgv2-color-picker">
+            <div class="bgv2-color-pastille">
+              <div class="bgv2-color-display" id="bgGrad2Display" style="background: #764ba2;"></div>
+              <input type="color" id="bgGrad2" value="#764ba2" class="bgv2-color-input">
+            </div>
+            <input type="text" id="bgGrad2Text" value="#764ba2" class="bgv2-color-text">
+          </div>
+        </div>
+
+        <div id="bgImageControls" class="bgv2-section" style="display:none;">
+          <label class="bgv2-label">Image de fond</label>
+          <input type="file" id="bgImageInput" accept="image/*" class="bgv2-input">
+
+          <div style="margin-top: 16px;">
+            <label class="bgv2-label">Ajustement de l'image</label>
+            <select id="bgImageFit" class="bgv2-select">
+              <option value="cover">Remplit tout l'espace</option>
+              <option value="contain">Image complète visible</option>
+              <option value="fill">Étirer</option>
+              <option value="repeat">Répéter</option>
+              <option value="repeat-x">Répéter horizontalement</option>
+              <option value="repeat-y">Répéter verticalement</option>
+              <option value="no-repeat">Centré</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bgv2-section" style="margin-bottom: 0;">
+          <label class="bgv2-label">Ajouter des éléments</label>
+          <div class="bgv2-add-buttons">
+            <button class="bgv2-button bgv2-button-primary" onclick="addImage()">+ Image</button>
+            <button class="bgv2-button bgv2-button-primary" onclick="addText()">+ Texte</button>
+          </div>
+          <p class="bgv2-hint">Cliquez sur un élément pour le modifier</p>
+        </div>
+      </div>
+
+      <!-- CANVAS CENTRAL -->
+      <div class="bgv2-preview">
+        <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+          <div id="canvas-container-v2">
+            <canvas id="canvas-v2"></canvas>
+          </div>
+          <button class="bgv2-button bgv2-button-primary" onclick="exportBanner()"
+            style="width: auto; padding: 12px 32px; font-size: 15px;">
+            Télécharger la bannière
+          </button>
+        </div>
+      </div>
+
+      <!-- SIDEBAR DROITE - CONTEXT PANEL -->
+      <div id="contextPanel" class="bgv2-context-panel hidden">
+        <div class="bgv2-empty-state">
+          Sélectionnez un élément<br />dans le canvas<br />pour le modifier
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
-<script src="../scripts/generateur-baniere.js"></script>
+  <script src="../scripts/generateur-baniere.js"></script>
 </body>
+
 </html>
